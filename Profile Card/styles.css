@@ -4,53 +4,84 @@
   box-sizing: border-box;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
-svg {
-  fill: #ffffff;
+
+i {
+  color: indigo;
 }
-.container {
+.icon{
+  color: white;
+}
+
+.main-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.profile-details {
   width: 300px;
-  height: 500px;
+  height: 370px;
+  display: flex;
+  /* justify-content: center; */
+  align-items: center;
+  flex-direction: column;
+  gap: 12px;
+  border-radius: 15px;
+  flex-direction: column;
+  box-shadow: 1.5px 1.5px 2px #6f3434
+}
+.profile-img {
+  background-color: #1FA0FD;
+  width: 100%;
+  height: 36%;
   display: flex;
   justify-content: center;
   align-items: center;
-  border-radius: 15px;
-  flex-direction: column;
-  background-color: goldenrod;
-  border: 2px solid black;
+  border-top-right-radius: inherit;
+  border-top-left-radius: inherit;
 }
-.profile-img{
-    width: 100px;
-    height: 100px;
-    border-radius: 60px;
+
+.img {
+  width: 100px;
+  height: 100px;
+  border-radius: 60px;
+  border: 2px solid white;
+  text-align: center;
 }
-.profile-details{
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-}
+
 .work-area {
   margin-top: 5px;
 }
+
 .text-content {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
 }
+
 .social-media {
   display: grid;
+  gap: 9px;
+  margin-top: 10px;
+  grid-template-columns: repeat(4, 30px);
+  justify-content: center;
+}
+
+.buttons {
+  display: flex;
   gap: 10px;
-  margin-top: 20px;
-  grid-template-columns: repeat(4, 1fr);
 }
-.buttons{
-    display: flex;
-    gap: 10px;
+
+.interact-btn {
+  border-radius: 20px;
+  padding: 8px 20px;
+  background-color: #3A6CE2;
+  border: none;
+  color: white;
+  cursor: pointer;
 }
-.interact-btn{
-   
-    border-radius: 20px;
-}
+
 .icons {
   background-color: brown;
   border-radius: 16px;
@@ -58,4 +89,37 @@ svg {
   justify-content: center;
   align-items: center;
   padding: 8px;
+  cursor: pointer;
+}
+
+.icon-1 {
+  background-color: #4269B0;
+}
+
+.icon-2 {
+  background-color: #4466B6;
+}
+
+.icon-2 {
+  background-color: #1FA0FD;
+}
+
+.icon-3 {
+  background-color: #E22F6E
+}
+
+.icon-4 {
+  background-color: #FE0008;
+}
+
+.interaction-result {
+  display: grid;
+  gap: 15px;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.interact-data {
+  display: flex;
+  flex-direction: row;
+  gap: 5px;
 }
