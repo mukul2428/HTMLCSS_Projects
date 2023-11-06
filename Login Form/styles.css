@@ -1,0 +1,136 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.main-container {
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+    height: 350px;
+    display: flex;
+    flex-direction: column;
+    gap: 34px;
+}
+
+.main-container ::before {
+    z-index: -2;
+    background: linear-gradient(to top right, rgb(54, 102, 204), #c17bc5);
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 22%;
+    border-radius: 10px 10px 0 0;
+}
+
+.login-header {
+    font-size: 28px;
+    display: flex;
+    color: white;
+    /* align-items: center; */
+    justify-content: center;
+    height: 50px;
+    width: 100%;
+}
+
+.login-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 15px;
+    background-color: #ffffff;
+}
+
+.login-content input[type="email"],
+.login-content input[type="password"] {
+    width: 100%;
+    height: 40px;
+    padding: 10px;
+    border-radius: 40px;
+    border: 1px solid gray;
+    font-size: 0.9em;
+}
+.login-content input[type="email"]:focus,
+.login-content input[type="password"]:focus {
+    border: 1px solid rgb(54, 102, 204);
+}
+.login-content input[type="email"]:focus~.placeholder-1,
+.login-content input[type="password"]:focus~.placeholder-2 {
+    display: block;
+}
+
+.placeholder-1 {
+    color: rgb(54, 102, 204);
+    position: absolute;
+    top: 27.5%;
+    left: 14%;
+    background-color: #ffffff;
+    padding: 0 5px;
+    font-size: 0.7em;
+    transition: all 0.3 ease;
+    display: none;
+}
+
+.placeholder-2 {
+    color: rgb(54, 102, 204);
+    position: absolute;
+    top: 43%;
+    left: 14%;
+    background-color: #ffffff;
+    padding: 0 5px;
+    font-size: 0.7em;
+    transition: all 0.3 ease;
+    display: none;
+}
+
+.take-action {
+    display: flex;
+    gap: 5px;
+    justify-content: space-between;
+    font-size: 0.8em;
+}
+
+.btn-link {
+    text-decoration: none;
+}
+
+.btn-link:hover {
+    text-decoration: underline;
+}
+
+.login-btn {
+    background: linear-gradient(to top right, rgb(54, 102, 204), #c17bc5);
+    width: 100%;
+    height: 36px;
+    color: white;
+    border-radius: 40px;
+    border: none;
+    font-size: 1em;
+    cursor: pointer;
+    transition: all 0.3 ease;
+}
+
+.login-btn:hover {
+    background: linear-gradient(to top right, #c17bc5, rgb(54, 102, 204));
+}
+
+.not-member {
+    display: flex;
+    justify-content: center;
+    gap: 14px;
+    font-size: 0.8em;
+}

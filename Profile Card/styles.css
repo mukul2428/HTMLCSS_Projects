@@ -44,7 +44,7 @@ i {
 .img {
   width: 100px;
   height: 100px;
-  border-radius: 60px;
+  border-radius: 50%;
   border: 2px solid white;
   text-align: center;
 }
@@ -76,15 +76,19 @@ i {
 .interact-btn {
   border-radius: 20px;
   padding: 8px 20px;
-  background-color: #3A6CE2;
+  background-color: #4070f4;
   border: none;
   color: white;
   cursor: pointer;
+  transition: all 0.3 ease;
+}
+.interact-btn:hover {
+  background-color: #0e4bf1;
 }
 
 .icons {
   background-color: brown;
-  border-radius: 16px;
+  border-radius: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
