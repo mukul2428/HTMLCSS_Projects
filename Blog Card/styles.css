@@ -5,28 +5,27 @@
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
 }
-body{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
 :root{
     --blue: rgba(0, 0, 255, 0.593);
     --sky-blue: rgba(0, 0, 255, 0.122);
     --date-size: .8rem;
     --skill-size: .9rem;
 }
+.blog{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
 .main-container{
     display: flex;
     background-color: wheat;
     border-radius: 10px;
-    width: 600px;
-    height: 270px;
-    gap: 10px;
-    padding: 20px;
+    gap: 10px;    
+    width: 70vw;
+    height: 40vh;
 }
-.main-container::before{
+/* .main-container::before{
     position: absolute;
     top: 0;
     left: 0;
@@ -35,18 +34,42 @@ body{
     content: '';
     background: url(flexBox.jpeg);
     background-repeat: repeat;
-    background-position: -130px 30px;
-    background-size: cover;
-    height: 100%;
-    width: 37%;
-}
+    background-position: -114px 30px;
+    background-size: cover;    
+    width: 20vw;
+    height: 40vh;
+} */
 .flexbox{
     position: relative;
-    top: 0;
+    width: 35%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
 }
-.flex-img{
-    width: 200px;
-    height: 100px;
+.flexbox>span{
+    font-size: 1.7rem;
+    font-weight: 900;
+    position: relative;    
+    top: 7px;
+}
+.flexbox>img{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background: url(flexBox.jpeg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+.blog-container{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 20px;
+    width: 65%;
+    justify-content: center;
 }
 .date{
     font-size: var(--date-size);
@@ -55,6 +78,10 @@ body{
     display: flex;
     gap: 20px;
     margin-top: 20px;
+}
+.skills{
+    display: flex;
+    gap: 20px;
 }
 .skill{
     background-color: var(--sky-blue);
@@ -72,9 +99,4 @@ body{
     height: 32px;
     border: none;
     border-radius: 8px;
-}
-.blog-container{
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
 }
