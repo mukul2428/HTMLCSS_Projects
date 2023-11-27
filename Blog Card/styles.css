@@ -22,7 +22,7 @@
     background-color: wheat;
     border-radius: 10px;
     gap: 10px;    
-    width: 70vw;
+    width: 90vw;
     height: 40vh;
 }
 /* .main-container::before{
@@ -41,7 +41,7 @@
 } */
 .flexbox{
     position: relative;
-    width: 35%;
+    width: 40%;
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -68,7 +68,7 @@
     flex-direction: column;
     gap: 10px;
     padding: 20px;
-    width: 65%;
+    width: 60%;
     justify-content: center;
 }
 .date{
