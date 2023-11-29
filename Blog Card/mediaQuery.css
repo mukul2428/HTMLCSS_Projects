@@ -96,4 +96,13 @@
     .skill{
         font-size: 1.1rem;
     }
+    .main-container{
+        width: 80vw;
+    }
+    .flexbox{
+        width: 50%;
+    }
+    .blog-container{
+        width: 50%;
+    }
 }
