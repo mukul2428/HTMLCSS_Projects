@@ -71,3 +71,11 @@ img{
 .dots:hover{
     color: #008080;
 }
+.mountain-img{
+    animation-name: fade;
+    animation-duration: .5s;
+}
+@keyframes fade{
+    from {opacity: .6}
+    to {opacity: 1}
+}
