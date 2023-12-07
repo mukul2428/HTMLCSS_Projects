@@ -13,17 +13,24 @@
   </head>
   <body>
     <div class="cards">
-      <img  src="mountain-1.jpg" alt="" />
-      <p class="image-no">1/4</p>
-      <div onclick="moveForward()" class="navigate right">
-        <i class="right fa fa-solid fa-chevron-right"></i>
+      <div class="card-content">
+        <img src="mountain-1.jpg" alt="" />
+        <p class="image-no">1/4</p>
+        <div onclick="moveForward()" class="navigate right">
+          <i class="right fa fa-solid fa-chevron-right"></i>
+        </div>
+        <div onclick="moveBackward()" class="navigate left">
+          <i class="left fa fa-solid fa-chevron-left"></i>
+        </div>
+        <p class="captions">Mountain SunRise</p>
+        <span class="image-dots"
+          ><i title="slide-1" class="dots fa fa-solid fa-circle"></i
+        ></span>
       </div>
-      <div onclick="moveBackward()" class="navigate left">
-        <i class="left fa fa-solid fa-chevron-left"></i>
-      </div>
-      <p class="captions">Mountain SunRise</p>
-      <span class="image-dots"
-        ><i title="slide-1" class="dots fa fa-solid fa-circle"></i></span>
+
+      <button onclick="startSlideShow(event)" type="button" class="slide-show">
+        Start Slide Show
+      </button>
     </div>
   </body>
 </html>

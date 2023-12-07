@@ -16,9 +16,9 @@ function moveForward() {
       document.getElementsByClassName("captions")[0].innerHTML =
         this.captions[this.imageNo - 1];
       this.makeOtherDefault(this.imageNo);
-      image.className = 'mountain-img';
-      setTimeout(()=>{
-        image.classList.remove('mountain-img');
+      image.className = "mountain-img";
+      setTimeout(() => {
+        image.classList.remove("mountain-img");
       }, 800);
     });
   }
@@ -34,9 +34,9 @@ function moveBackward() {
       document.getElementsByClassName("captions")[0].innerHTML =
         this.captions[this.imageNo - 1];
       this.makeOtherDefault(this.imageNo);
-      image.className = 'mountain-img';
-      setTimeout(()=>{
-        image.classList.remove('mountain-img');
+      image.className = "mountain-img";
+      setTimeout(() => {
+        image.classList.remove("mountain-img");
       }, 800);
     });
   }
@@ -51,11 +51,11 @@ function imageClicked(imageNo) {
         "image-no"
       )[0].innerHTML = `${imageNo}/${this.captions.length}`;
       document.getElementsByClassName("captions")[0].innerHTML =
-        this.captions[imageNo-1];
+        this.captions[imageNo - 1];
       this.makeOtherDefault(imageNo);
-      image.className = 'mountain-img';
-      setTimeout(()=>{
-        image.classList.remove('mountain-img');
+      image.className = "mountain-img";
+      setTimeout(() => {
+        image.classList.remove("mountain-img");
       }, 800);
     });
     this.imageNo = imageNo;
@@ -74,17 +74,40 @@ window.onload = () => {
     if (i == 1) {
       let firstImage = document.getElementsByClassName("dots")[0];
       firstImage.style.color = "#008080";
-      firstImage.addEventListener("click", ()=>{
+      firstImage.addEventListener("click", () => {
         imageClicked(i);
       });
     } else {
       let ele = document.createElement("i");
       ele.className = "dots fa fa-solid fa-circle";
       ele.setAttribute("title", `slide-${i}`);
-      ele.addEventListener("click", ()=>{
+      ele.addEventListener("click", () => {
         imageClicked(i);
       });
       document.getElementsByClassName("image-dots")[0].appendChild(ele);
     }
   }
 };
+var movement = this.imageNo != this.captions.length ? "forward" : "backward";
+var myInterval;
+function startSlideShow(e) {
+  if (e.target.innerHTML === "Start Slide Show") {
+    e.target.innerHTML = "Stop Slide Show";
+    this.myInterval = setInterval(() => {
+      if (this.movement === "forward") {
+        this.moveForward();
+        if (this.imageNo == this.captions.length) {
+          this.movement = "backward";
+        }
+      } else if (this.movement === "backward") {
+        this.moveBackward();
+        if (this.imageNo == 1) {
+          this.movement = "forward";
+        }
+      }
+    }, 1000);
+  } else {
+    e.target.innerHTML = "Start Slide Show";
+    clearInterval(this.myInterval);
+  }
+}

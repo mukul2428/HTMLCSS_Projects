@@ -5,11 +5,20 @@
   box-sizing: border-box;
   font-family: "Outfit", sans-serif;
 }
-.cards{
+body{
     position: absolute;
-    top: 50%;
     left: 50%;
+    top: 50%;
     transform: translate(-50%, -50%);
+}
+.cards{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.card-content{
+    position: relative;
 }
 img{
     height: 300px;
@@ -78,4 +87,13 @@ img{
 @keyframes fade{
     from {opacity: .6}
     to {opacity: 1}
+}
+.slide-show{
+    padding: 8px;
+    color: white;
+    cursor: pointer;
+    border: none;
+    background-color: orange;
+    border-radius: 4px;
+    display: block;
 }
