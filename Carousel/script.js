@@ -88,6 +88,24 @@ window.onload = () => {
     }
   }
 };
+
+// callImageApi = () =>{
+//   const response = fetch('https://picsum.photos/v2/list');
+//   response.then((resp)=>{
+//     resp.json().then((rep)=>{
+//       console.log(rep);
+//     });
+//   })
+// }
+
+var apiData, start = 0, end = 9;
+getImages = async () =>{
+    const response = await fetch('https://picsum.photos/v2/list');
+    const data = await response.json();
+    const start = this.start;
+    const end = this.end;
+}
+
 var movement = this.imageNo != this.captions.length ? "forward" : "backward";
 var myInterval;
 function startSlideShow(e) {
