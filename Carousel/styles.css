@@ -16,6 +16,7 @@ body{
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    gap: 10px;
 }
 .card-content{
     position: relative;
@@ -25,7 +26,7 @@ img{
     width: 400px;
     border-radius: 5px;
 }
-.captions{
+.imageCaptions{
     color: white;
     position: absolute;
     bottom: 40px;
@@ -63,6 +64,7 @@ img{
     top: 10px;
     left: 10px;
     color: white;
+    mix-blend-mode: difference;
 }
 .image-dots{
     position: absolute;
